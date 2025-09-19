@@ -1,0 +1,383 @@
+/* Base Styles */
+:root {
+  --primary-color: #2a7f62;
+  --secondary-color: #3ab795;
+  --accent-color: #ff7e5f;
+  --light-bg: #f5f9f8;
+  --dark-text: #333;
+  --light-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.healthcare-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-container p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  min-width: 250px;
+}
+
+.search-bar button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #e56d50;
+}
+
+/* Navigation Tabs */
+.service-tabs {
+  display: flex;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 1rem 1.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  background-color: var(--light-bg);
+}
+
+.tab.active {
+  border-bottom-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+.tab-title{
+  color:#2a7f62;
+}
+/* Main Content */
+.service-content {
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.service-card {
+  flex: 3;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.service-card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.app-features {
+  flex: 1;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  align-self: flex-start;
+}
+
+.app-features h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.app-features ul {
+  list-style-type: none;
+}
+
+.app-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Service-specific styles */
+.summarization-demo textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.result-placeholder {
+  background-color: var(--light-bg);
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.qa-demo input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.faq-examples {
+  margin-top: 2rem;
+}
+
+.faq-examples ul {
+  list-style-type: none;
+  margin-top: 0.5rem;
+}
+
+.faq-examples li {
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.faq-examples li:hover {
+  text-decoration: underline;
+}
+
+.cdss-demo .form-group {
+  margin-bottom: 1rem;
+}
+
+.cdss-demo label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.cdss-demo input,
+.cdss-demo select,
+.cdss-demo textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--light-text);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  background-color: var(--secondary-color);
+  color: #2e9e7f;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #2e9e7f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .service-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .service-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    flex: 1 0 120px;
+    justify-content: center;
+  }
+}
+
+/* Appointment Section Styles */
+.booking-section {
+  width: 100%;
+}
+
+.service-card-full {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  width: 100%;
+}
+
+.appointment-booking-container {
+  margin-top: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-card-full {
+    padding: 1rem;
+  }
+}
+
+/* Self-Care Tools Section */
+.selfcare-tools {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-top: 0rem;
+}
+
+.selfcare-tools h3 {
+  color: #2a7f62;
+  margin-bottom: 1rem;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.tool-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tool-card:hover {
+  border-color: #2a7f62;
+  background-color: #f5f9f8;
+}
+
+.tool-card.active {
+  border-color: #2a7f62;
+  background-color: #e0f0eb;
+}
+
+.tool-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.tool-card h4 {
+  color: #333;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.tool-container {
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,228 @@
+/* PeriodTracker.css */
+:root {
+  --primary-color: #2a7f62;
+  --secondary-color: #3ab795;
+  --accent-color: #ff7e5f;
+  --light-bg: #f5f9f8;
+  --dark-text: #333;
+  --light-text: #fff;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--light-bg);
+  margin: 0;
+  padding: 0;
+  color: var(--dark-text);
+}
+
+.tracker-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(42, 127, 98, 0.1);
+}
+#main_title{
+  text-align: center;
+}
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Info Button & Section */
+.info-button {
+  display: block;
+  margin: 0 auto 1.5rem;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.info-button:hover {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  transform: translateY(-2px);
+}
+
+.info-section {
+  background-color: var(--light-bg);
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.8rem;
+  padding: 1.3rem;
+  margin: 1rem 0 1.5rem;
+  color: var(--dark-text);
+}
+
+.info-section h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.info-section p {
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+/* Tab Navigation */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  border: 2px solid var(--secondary-color);
+  border-radius: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-buttons button.active {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  box-shadow: 0 3px 6px rgba(58, 183, 149, 0.2);
+}
+
+/* Form Styles */
+.tracker-form, .symptom-log {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: -0.5rem;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"] {
+  padding: 0.8rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  background-color: var(--light-bg);
+}
+
+button {
+  padding: 0.8rem;
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(42, 127, 98, 0.2);
+}
+
+/* Results Section */
+.tracker-result {
+  background-color: var(--light-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  margin-top: 1.8rem;
+  color: var(--dark-text);
+  line-height: 1.8;
+}
+
+.tracker-result p {
+  margin: 0.7rem 0;
+}
+
+/* Log Section */
+.symptom-log h4 {
+  margin-top: 1rem;
+  color: var(--primary-color);
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.symptom-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.symptom-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  border-left: 4px solid var(--accent-color);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.log-date {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.log-week {
+  background-color: var(--light-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+}
+
+.log-mood, .log-symptom {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #ddd;
+}
+
+.no-logs {
+  text-align: center;
+  color: #777;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .tracker-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .tab-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .symptom-list li {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

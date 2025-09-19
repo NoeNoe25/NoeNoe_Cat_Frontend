@@ -1,0 +1,90 @@
+/* Base Styles */
+.medication-reminder {
+  max-width: 800px; margin: 0 auto; padding: 1.5rem;
+  background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.medication-reminder h2 { color: #2a7f62; text-align: center; margin-bottom: 0.5rem; }
+.description { color: #666; text-align: center; margin-bottom: 1.5rem; }
+
+/* Notification Controls */
+.notification-controls { margin-bottom: 1.5rem; display: flex; gap: 1rem; }
+.notification-btn {
+  padding: 0.8rem 1.5rem; border: none; border-radius: 4px;
+  background: #f0f0f0; color: #555; font-weight: bold; cursor: pointer;
+  transition: all 0.3s;
+}
+.notification-btn.enabled { background: #2a7f62; color: white; }
+.test-btn {
+  padding: 0.8rem 1.5rem; border: 1px solid #ddd; border-radius: 4px;
+  background: #f5f5f5; cursor: pointer;
+}
+
+/* Form Styles */
+.medication-form { background: #f9f9f9; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: #555; font-weight: 500; }
+.form-group input, .form-group select {
+  width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;
+}
+
+.form-row { display: flex; gap: 1rem; }
+.form-row .form-group { flex: 1; }
+
+/* Time Input Styles */
+.time-input-group { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.8rem; }
+.time-selectors { display: flex; align-items: center; gap: 0.5rem; }
+.time-selectors select { width: 80px; padding: 0.6rem; }
+.time-selectors span { font-weight: bold; }
+.remove-time { background: none; border: none; color: #ff4444; font-size: 1.2rem; cursor: pointer; }
+.add-time {
+  background: none; border: none; color: #2a7f62; font-size: 0.9rem;
+  cursor: pointer; padding: 0.5rem 0; display: flex; align-items: center;
+}
+
+/* Button Styles */
+.form-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.add-btn, .reset-btn {
+  padding: 0.8rem; border-radius: 4px; cursor: pointer; font-size: 1rem;
+}
+.add-btn { flex: 2; background: #2a7f62; color: white; border: none; }
+.reset-btn { flex: 1; background: #f5f5f5; color: #555; border: 1px solid #ddd; }
+
+/* Medication List Styles */
+.medication-list { margin-top: 2rem; }
+.medication-list h3 { color: #2a7f62; margin-bottom: 1rem; }
+.list-header, .medication-item {
+  display: grid; grid-template-columns: 2fr 2fr 1fr;
+  padding: 0.8rem 1rem; margin-bottom: 0.5rem;
+}
+.list-header { background: #f0f0f0; border-radius: 4px; font-weight: bold; }
+.medication-item { align-items: center; border-bottom: 1px solid #eee; }
+
+.med-info { display: flex; flex-direction: column; }
+.med-name { font-weight: 500; }
+.med-dosage { font-size: 0.9rem; color: #666; }
+.med-schedule { font-size: 0.9rem; }
+.remove-btn {
+  background: #ffebee; color: #c62828; border: 1px solid #ffcdd2;
+  padding: 0.5rem; border-radius: 4px; cursor: pointer; font-size: 0.9rem;
+}
+
+/* Notification & Health Note */
+.in-app-notification {
+  position: fixed; top: 20px; right: 20px; z-index: 1000;
+  background: white; padding: 1rem; border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2); display: flex; align-items: center;
+}
+.health-note {
+  margin-top: 2rem; padding: 1rem; background: #fff8e1;
+  border-radius: 4px; border-left: 4px solid #ffc107; font-size: 0.9rem; color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-row, .notification-controls { flex-direction: column; gap: 0.5rem; }
+  .list-header, .medication-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .medication-item { padding: 1rem 0; }
+  .form-actions { flex-direction: column; }
+  .add-btn, .reset-btn { width: 100%; }
+}
