@@ -1,6 +1,0 @@
-Flask
-flask-cors
-firebase-admin
-google-generativeai
-python-dotenv
-requests
