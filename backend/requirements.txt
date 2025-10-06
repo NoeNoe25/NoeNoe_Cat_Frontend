@@ -1,0 +1,9 @@
+google-generativeai
+vosk
+websockets
+uvicorn[standard]
+databases[asyncpg]
+fastapi
+# numpy
+# soundfile
+gTTS
